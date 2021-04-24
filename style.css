@@ -1,0 +1,214 @@
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+body {
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    color: var(--Pale-Blue);
+    background: url(bg-desktop.png)no-repeat center bottom;
+    background-size: 100%;
+    background-color: var(--Very-Dark-Blue);
+    height: 100vh;
+    overflow: hidden;
+    
+}
+/*container*/
+.container {
+    padding-top:269px;
+    padding-bottom:60px ;
+       display: flex;
+       justify-content: center;
+       align-content: center;
+       gap: 1rem;
+}
+/*border-card*/
+.border-card {
+    width: 300px;
+    height: 150px;
+background-color: var(--Dark-Blue);
+border-top-right-radius: 87px;
+border-top-left-radius:10px ;
+border-bottom-left-radius:10px ;
+border-bottom-right-radius:10px ;
+
+}
+.border-card .logo img {
+    width: 120px;
+    margin-bottom: 16px;
+    height: 35px;
+}
+.border-card .icons .icon {
+    background-color: var(--Very-Dark-Blue);
+    border: 11px solid var(--Very-Dark-Blue);
+    border-radius: 9px;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+}
+
+.content-border{
+    margin: 0px 20px;
+    padding-top: 30px;
+}
+
+    /* card */
+    .card {
+        width: 494px;
+        height: 126px;
+        background-color: var(--Dark-Blue);
+        border-radius: 10px;
+        margin-top: 25px;
+        position: relative;
+    }
+        
+    
+    .content {
+    
+      margin-left: 40px;
+       
+    }
+    .solid {
+        width: 420px;
+        height: 20px;
+        border-radius: 30px;
+        background-color: var(--Very-Dark-Blue);
+    }
+    .progress {
+        width: 350px;
+        height: 20px;
+        border-radius: 30px;
+       background: linear-gradient( hsl(6, 100%, 80%),  hsl(335, 100%, 65%)) ;
+     
+    }
+    .circle {
+        width: 14px;
+        height: 11px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        position: relative;
+        left: 335px;
+        padding-top: 7px;
+    } 
+ 
+   .start-end {
+       display: flex;
+       justify-content: space-between;
+   }
+   h3 {
+       font-size: 11px;
+       margin-right: 35px;
+   }
+   /*after*/
+.card::before {
+    content: "185 GB LEFT";
+    color: #444;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    width: 166px;
+    height: 81px;
+    border-radius: 10px;
+    background-color: #fff;
+    position: absolute;
+    right: 40px;
+    bottom: 104px;
+   
+}
+.card span::before {
+    content: " ";
+    border-color: #fff transparent transparent transparent;
+    position: absolute;
+    border-width:15px;
+    border-style: solid;
+    right: 43px;
+}
+
+@media (max-width:375px) {
+    body {
+        font-size: 14px;
+        font-family: 'Raleway', sans-serif;
+        color: var(--Pale-Blue);
+        background: url(bg-mobile.png)no-repeat center center/cover;
+      
+        background-color: var(--Very-Dark-Blue);
+        height: 100vh;
+        overflow: hidden;
+        overflow-y: hidden;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-left:20px;
+    }
+    .border-card {
+        width: 316px;
+        height: 186px;
+        background-color: var(--Dark-Blue);
+        border-top-right-radius: 87px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    
+    }
+    .card {
+        width: 324px;
+        height: 126px;
+        background-color: var(--Dark-Blue);
+        border-radius: 10px;
+        margin-top: 25px;
+        position: relative;
+    }
+    .solid {
+        width: 268px;
+        height: 20px;
+        border-radius: 30px;
+        background-color: var(--Very-Dark-Blue);
+    }
+    .progress {
+        width: 220px;
+        height: 20px;
+        border-radius: 30px;
+       background: linear-gradient( hsl(6, 100%, 80%),  hsl(335, 100%, 65%)) ;
+     
+    }
+    .circle {
+        width: 14px;
+        height: 11px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        position: relative;
+        left: 205px;
+        padding-top: 7px;
+    } 
+    .card span::before {
+        content: " ";
+        border-color: transparent transparent transparent transparent;
+        position: absolute;
+        border-width:15px;
+        border-style: solid;
+        right: 43px;
+    }
+    .card::before {
+        content: "185 GB LEFT";
+        color: #444;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        width: 166px;
+        height: 81px;
+        border-radius: 10px;
+        background-color: #fff;
+        position: absolute;
+        right: 75px;
+        bottom: -56px;
+       
+    }
+}
+
